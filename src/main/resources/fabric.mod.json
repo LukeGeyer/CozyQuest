@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "cozyquest",
+	"version": "${version}",
+	"name": "CozyQuest",
+	"description": "",
+	"authors": [
+		"LukeGeyer"
+	],
+	"contact": {
+		"sources": "https://github.com/LukeGeyer/CozyQuest"
+	},
+	"license": "MIT",
+	"icon": "assets/cozyquest/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.cozyquest.CozyQuest"
+		],
+		"client": [
+			"com.cozyquest.client.CozyQuestClient"
+		]
+	},
+	"mixins": [
+		"cozyquest.mixins.json",
+		{
+			"config": "cozyquest.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.2",
+		"minecraft": "~26.1.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
